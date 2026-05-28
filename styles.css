@@ -1224,7 +1224,7 @@ footer {
   .hero-copy h1 {
     max-width: 600px;
     margin-bottom: 18px;
-    font-size: clamp(2.65rem, 8.6vw, 3.65rem);
+    font-size: clamp(2.45rem, 7.8vw, 3.35rem);
   }
 
   .hero-text {
@@ -1443,7 +1443,7 @@ footer {
   }
 
   h1 {
-    font-size: clamp(2.08rem, 11.6vw, 2.68rem);
+    font-size: clamp(1.95rem, 10.5vw, 2.45rem);
   }
 
   .actions {
