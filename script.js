@@ -207,7 +207,6 @@ if (mediaToggle && mediaPanel) {
 }
 
 const contactForm = document.querySelector("[data-contact-form]");
-const formNote = document.querySelector("[data-form-note]");
 
 if (contactForm) {
   contactForm.addEventListener("submit", (event) => {
@@ -219,9 +218,6 @@ if (contactForm) {
     const message = String(formData.get("message") || "").trim();
 
     if (!name || !contact || !message) {
-      if (formNote) {
-        formNote.textContent = "Please fill in your name, contact, and event details.";
-      }
       return;
     }
 
@@ -230,9 +226,5 @@ if (contactForm) {
     );
 
     window.location.href = `sms:+13053065669?&body=${smsBody}`;
-
-    if (formNote) {
-      formNote.textContent = "Your message is ready in your device messaging app.";
-    }
   });
 }
