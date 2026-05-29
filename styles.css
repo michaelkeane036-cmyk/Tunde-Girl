@@ -75,20 +75,40 @@ a {
 .nav {
   position: relative;
   z-index: 20;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
-  gap: 28px;
-  min-height: 86px;
-  padding: 0 44px;
+  justify-content: stretch;
+  gap: 0 28px;
+  min-height: 148px;
+  padding: 18px 44px 16px;
   border-bottom: 1px solid var(--line);
   background: rgba(22, 7, 17, 0.72);
 }
 
+.nav::after {
+  position: absolute;
+  top: 92px;
+  right: 44px;
+  left: 44px;
+  height: 1px;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 79, 154, 0.28),
+    rgba(220, 184, 113, 0.22),
+    transparent
+  );
+}
+
 .brand {
   position: relative;
+  grid-column: 1 / -1;
+  justify-self: center;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 16px;
@@ -114,10 +134,10 @@ a {
 
 .brand-logo {
   display: block;
-  width: clamp(154px, 16vw, 196px);
-  height: 74px;
+  width: clamp(220px, 20vw, 284px);
+  height: 82px;
   object-fit: contain;
-  object-position: left center;
+  object-position: center;
   border-radius: 13px;
   filter:
     sepia(1)
@@ -165,12 +185,23 @@ a {
 }
 
 .nav-links {
+  grid-column: 2;
+  justify-self: center;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: clamp(22px, 4vw, 40px);
+  min-height: 52px;
   color: var(--muted);
   font-size: 0.96rem;
   font-weight: 500;
+}
+
+.nav-cta {
+  grid-column: 3;
+  justify-self: end;
+  min-height: 47px;
+  padding: 0 22px;
 }
 
 .nav-links a {
@@ -548,8 +579,8 @@ h1 span {
   object-position: 50% 35%;
 }
 
-.photo-waterfront {
-  object-position: 52% 28%;
+.photo-mic {
+  object-position: 50% 30%;
 }
 
 @keyframes orbit-waterfront {
@@ -753,6 +784,14 @@ h1 span {
   margin: 13px 0 0;
   font-size: clamp(2rem, 3.6vw, 2.55rem);
   letter-spacing: -0.045em;
+}
+
+.experience-caption {
+  max-width: 500px;
+  margin-top: 14px;
+  color: var(--ink-muted);
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .services {
@@ -994,6 +1033,7 @@ h1 span {
   border-radius: 18px;
   background: #2a0d1e;
   box-shadow: 0 16px 35px rgba(65, 24, 42, 0.12);
+  transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
 }
 
 .gallery-item-large {
@@ -1007,6 +1047,21 @@ h1 span {
   height: 100%;
   min-height: 254px;
   object-fit: cover;
+  transition: transform 520ms ease;
+}
+
+.gallery-item:hover,
+.gallery-item:focus-within {
+  border-color: rgba(255, 79, 154, 0.34);
+  box-shadow: 0 20px 46px rgba(65, 24, 42, 0.18);
+  transform: translateY(-2px);
+}
+
+.gallery-item:hover img,
+.gallery-item:hover video,
+.gallery-item:focus-within img,
+.gallery-item:focus-within video {
+  transform: scale(1.07);
 }
 
 .booking {
@@ -1126,10 +1181,15 @@ footer {
 
 @media (max-width: 960px) {
   .nav {
+    display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
     min-height: 104px;
     padding: 25px 29px;
+  }
+
+  .nav::after {
+    display: none;
   }
 
   .brand {
@@ -1137,6 +1197,7 @@ footer {
     top: 50%;
     left: 50%;
     z-index: 2;
+    width: auto;
     transform: translate(-50%, -50%);
   }
 
@@ -1361,6 +1422,10 @@ footer {
 
   .photo-card.is-active .hero-photo {
     transform: scale(1);
+  }
+
+  .photo-mic {
+    object-position: 52% 36%;
   }
 
   .card-caption {
@@ -1652,6 +1717,9 @@ footer {
   .photo-card,
   .service-icon,
   .gallery-button-icon,
+  .gallery-item,
+  .gallery-item img,
+  .gallery-item video,
   .button-icon,
   .link-icon,
   .nav-icon,
