@@ -14,10 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,600..800&family=Outfit:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" href="378B17AD-CD6E-40B8-9E91-78230794A19E.png" />
-    <link rel="apple-touch-icon" href="378B17AD-CD6E-40B8-9E91-78230794A19E.png" />
-    <link rel="stylesheet" href="styles.css?v=20260528-nav-gallery-polish" />
-    <script src="script.js?v=20260528-nav-gallery-polish" defer></script>
+    <link rel="icon" type="image/png" href="newlogo.png" />
+    <link rel="apple-touch-icon" href="newlogo.png" />
+    <link rel="stylesheet" href="styles.css?v=20260605-podcast-section" />
+    <script src="script.js?v=20260605-podcast-section" defer></script>
   </head>
   <body>
     <main class="page">
@@ -25,13 +25,17 @@
         <a class="brand" href="#" aria-label="Tunde Girl home">
           <img
             class="brand-logo"
-            src="378B17AD-CD6E-40B8-9E91-78230794A19E.png"
+            src="newlogo.png"
             alt="Tunde Girl logo"
           />
         </a>
-        <a class="mobile-call" href="tel:+13053065669" aria-label="Call Tunde Girl">
-          <svg class="mobile-call-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2 4 1v3.7A15.9 15.9 0 0 1 4.1 4.6H8l1 4z" />
+        <a
+          class="mobile-action"
+          href="mailto:hello@tundegirl.com?subject=Booking%20Inquiry%20For%20Tunde%20Girl"
+          aria-label="Email Tunde Girl"
+        >
+          <svg class="mobile-action-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 5h18v14H3zm3.1 2L12 11.6 17.9 7zm12.9 9.6V9.3l-7 5.4-7-5.4v7.3z" />
           </svg>
         </a>
         <button
@@ -73,6 +77,12 @@
             </svg>
             Gallery
           </a>
+          <a href="#podcast">
+            <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 4a7 7 0 0 1 7 7v3a3 3 0 0 1-3 3h-1v-6h4a7 7 0 0 0-14 0h4v6H8a3 3 0 0 1-3-3v-3a7 7 0 0 1 7-7zm-2 8h4v8h-4z" />
+            </svg>
+            The Tunde Girl Experience
+          </a>
           <a href="#contact">
             <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M4 5h16v12H8l-4 3zm3 4h10V7H7zm0 4h7v-2H7z" />
@@ -80,9 +90,9 @@
             Contact
           </a>
         </nav>
-        <a class="button nav-cta" href="tel:+13053065669">
+        <a class="button nav-cta" href="mailto:hello@tundegirl.com?subject=Booking%20Inquiry%20For%20Tunde%20Girl">
           <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2 4 1v3.7A15.9 15.9 0 0 1 4.1 4.6H8l1 4z" />
+            <path d="M3 5h18v14H3zm3.2 2 5.8 4.5L17.8 7zm0 10h11.6v-6.9L12 14.5l-5.8-4.4z" />
           </svg>
           Book Now
         </a>
@@ -92,13 +102,19 @@
         <div class="hero-backdrop" aria-hidden="true" data-hero-backdrop>
           <img
             class="hero-backdrop-image is-active"
-            src="827d0b64-4031-40c9-bedd-71de0a2c56e1.jpg"
+            src="IMG_4644.JPG"
             alt=""
             data-backdrop-slide
           />
           <img
             class="hero-backdrop-image"
             src="copy_D0503BA5-5285-4B8D-B305-48917AC8F0FC.jpeg"
+            alt=""
+            data-backdrop-slide
+          />
+          <img
+            class="hero-backdrop-image"
+            src="2F7B3155-67A6-4C58-8796-CCFD097D2F9A.png"
             alt=""
             data-backdrop-slide
           />
@@ -112,9 +128,9 @@
             hand.
           </p>
           <div class="actions">
-            <a class="button" href="tel:+13053065669">
+            <a class="button" href="mailto:hello@tundegirl.com?subject=Booking%20Inquiry%20For%20Tunde%20Girl">
               <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2 4 1v3.7A15.9 15.9 0 0 1 4.1 4.6H8l1 4z" />
+                <path d="M3 5h18v14H3zm3.2 2 5.8 4.5L17.8 7zm0 10h11.6v-6.9L12 14.5l-5.8-4.4z" />
               </svg>
               Book Tunde Girl
             </a>
@@ -136,20 +152,9 @@
         >
           <figure class="photo-card is-active" data-gallery-slide>
             <img
-              class="hero-photo photo-studio"
-              src="11e14910-49b5-44c1-bc8b-f3a3fd88a6f8.jpg"
-              alt="Tunde Girl in a black glam studio portrait"
-            />
-            <figcaption class="card-caption">
-              <strong>MC Tunde Girl</strong>
-              <span>Live</span>
-            </figcaption>
-          </figure>
-          <figure class="photo-card" data-gallery-slide>
-            <img
               class="hero-photo photo-event"
-              src="827d0b64-4031-40c9-bedd-71de0a2c56e1.jpg"
-              alt="Tunde Girl hosting on stage with a guest"
+              src="IMG_4644.JPG"
+              alt="Tunde Girl smiling in a red gown on a red carpet with a microphone"
             />
             <figcaption class="card-caption">
               <strong>Big Energy</strong>
@@ -165,6 +170,17 @@
             <figcaption class="card-caption">
               <strong>On The Mic</strong>
               <span>Live</span>
+            </figcaption>
+          </figure>
+          <figure class="photo-card" data-gallery-slide>
+            <img
+              class="hero-photo photo-white-mic"
+              src="2F7B3155-67A6-4C58-8796-CCFD097D2F9A.png"
+              alt="Tunde Girl smiling in a white suit while holding a pink microphone"
+            />
+            <figcaption class="card-caption">
+              <strong>Signature Style</strong>
+              <span>MC</span>
             </figcaption>
           </figure>
           <div class="gallery-dots" aria-label="Choose featured photo">
@@ -256,6 +272,34 @@
         </p>
       </section>
 
+      <section class="podcast" id="podcast">
+        <figure class="podcast-art">
+          <img
+            src="D16A4B51-C1A3-49B5-9A37-55615AC191B3.png"
+            alt="The Tunde Girl Experience podcast artwork"
+          />
+        </figure>
+        <div class="podcast-copy">
+          <span class="eyebrow eyebrow-gold">Podcast</span>
+          <h2>The Tunde Girl Experience</h2>
+          <p>
+            Real conversations, real people, and real perspectives. New
+            episodes will live here weekly as the experience grows.
+          </p>
+          <a
+            class="button podcast-button"
+            href="https://www.youtube.com/@thetundegirlexperience"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.6 4.6 12 4.6 12 4.6s-5.6 0-7.5.5a3 3 0 0 0-2.1 2.1A31 31 0 0 0 2 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.9.5 7.5.5 7.5.5s5.6 0 7.5-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22 12a31 31 0 0 0-.4-4.8zM10 15.4V8.6l5.8 3.4z" />
+            </svg>
+            Watch On YouTube
+          </a>
+        </div>
+      </section>
+
       <section class="media-gallery" id="gallery">
         <div class="gallery-intro">
           <span class="eyebrow eyebrow-gold">Media Room</span>
@@ -341,6 +385,24 @@
               alt="Tunde Girl gallery photo"
             />
           </figure>
+          <figure class="gallery-item">
+            <img
+              src="2F7B3155-67A6-4C58-8796-CCFD097D2F9A.png"
+              alt="Tunde Girl gallery photo"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="e4947576-9fdd-47d2-843b-4522fcad850d.jpg"
+              alt="Tunde Girl gallery photo"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="IMG_4644.JPG"
+              alt="Tunde Girl gallery photo"
+            />
+          </figure>
         </div>
       </section>
 
@@ -356,11 +418,11 @@
               <input type="text" name="name" placeholder="Your name" required />
             </label>
             <label>
-              Phone or Email
+              Email
               <input
-                type="text"
+                type="email"
                 name="contact"
-                placeholder="How should she reply?"
+                placeholder="Your email address"
                 required
               />
             </label>
@@ -381,17 +443,17 @@
             Send Message
           </button>
           <div class="booking-links">
-            <a href="tel:+13053065669">
-              <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2 4 1v3.7A15.9 15.9 0 0 1 4.1 4.6H8l1 4z" />
-              </svg>
-              Call 305-306-5669
-            </a>
-            <a href="https://www.instagram.com/iamtundegirl/" aria-label="Follow Tunde Girl on Instagram">
+            <a href="https://www.instagram.com/thetundegirlexperience/" aria-label="Follow Tunde Girl on Instagram">
               <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm5 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm5.5-.7a1.1 1.1 0 1 0 0-2.2 1.1 1.1 0 0 0 0 2.2z" />
               </svg>
-              @iamtundegirl
+              @thetundegirlexperience
+            </a>
+            <a href="https://www.youtube.com/@thetundegirlexperience" aria-label="Watch Tunde Girl on YouTube">
+              <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.6 4.6 12 4.6 12 4.6s-5.6 0-7.5.5a3 3 0 0 0-2.1 2.1A31 31 0 0 0 2 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.9.5 7.5.5 7.5.5s5.6 0 7.5-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22 12a31 31 0 0 0-.4-4.8zM10 15.4V8.6l5.8 3.4z" />
+              </svg>
+              @thetundegirlexperience
             </a>
             <a href="mailto:hello@tundegirl.com">
               <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true">

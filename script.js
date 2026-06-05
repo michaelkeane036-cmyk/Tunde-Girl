@@ -221,10 +221,11 @@ if (contactForm) {
       return;
     }
 
-    const smsBody = encodeURIComponent(
-      `Hi Tunde Girl, my name is ${name}.\n\nContact: ${contact}\n\nEvent details: ${message}`
+    const emailSubject = encodeURIComponent("Booking Inquiry For Tunde Girl");
+    const emailBody = encodeURIComponent(
+      `Hi Tunde Girl,\n\nMy name is ${name}.\n\nEmail: ${contact}\n\nEvent details:\n${message}`
     );
 
-    window.location.href = `sms:+13053065669?&body=${smsBody}`;
+    window.location.href = `mailto:hello@tundegirl.com?subject=${emailSubject}&body=${emailBody}`;
   });
 }

@@ -180,7 +180,7 @@ a {
   outline-offset: 5px;
 }
 
-.mobile-call {
+.mobile-action {
   display: none;
 }
 
@@ -571,16 +571,16 @@ h1 span {
     linear-gradient(150deg, #160711, #42132d);
 }
 
-.photo-studio {
-  object-position: 48% 30%;
-}
-
 .photo-event {
   object-position: 50% 35%;
 }
 
 .photo-mic {
   object-position: 50% 30%;
+}
+
+.photo-white-mic {
+  object-position: 50% 18%;
 }
 
 @keyframes orbit-waterfront {
@@ -909,6 +909,76 @@ h1 span {
   color: var(--ink);
 }
 
+.podcast {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(330px, 1fr);
+  gap: clamp(30px, 5vw, 60px);
+  align-items: center;
+  padding: 72px;
+  color: var(--text);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 22%, rgba(255, 79, 154, 0.24), transparent 32%),
+    radial-gradient(circle at 87% 28%, rgba(220, 184, 113, 0.14), transparent 27%),
+    linear-gradient(135deg, #2a0d1e, #160711 68%);
+}
+
+.podcast::before {
+  position: absolute;
+  inset: auto -120px -170px auto;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 79, 154, 0.18), transparent 68%);
+  filter: blur(6px);
+}
+
+.podcast-art {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border: 1px solid rgba(220, 184, 113, 0.28);
+  border-radius: 24px;
+  background: #2a0d1e;
+  box-shadow:
+    0 24px 54px rgba(0, 0, 0, 0.28),
+    0 0 30px rgba(255, 79, 154, 0.16);
+}
+
+.podcast-art img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center;
+}
+
+.podcast-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.podcast-copy h2 {
+  max-width: 520px;
+  margin: 12px 0 14px;
+  font-size: clamp(2.1rem, 4vw, 3.05rem);
+  letter-spacing: -0.05em;
+}
+
+.podcast-copy p {
+  max-width: 520px;
+  margin-bottom: 26px;
+  color: rgba(244, 251, 251, 0.78);
+  font-size: 1rem;
+}
+
+.podcast-button {
+  width: fit-content;
+}
+
 .media-gallery {
   position: relative;
   display: grid;
@@ -1040,8 +1110,7 @@ h1 span {
   grid-column: span 2;
 }
 
-.gallery-item img,
-.gallery-item video {
+.gallery-item img {
   display: block;
   width: 100%;
   height: 100%;
@@ -1058,9 +1127,7 @@ h1 span {
 }
 
 .gallery-item:hover img,
-.gallery-item:hover video,
-.gallery-item:focus-within img,
-.gallery-item:focus-within video {
+.gallery-item:focus-within img {
   transform: scale(1.07);
 }
 
@@ -1212,7 +1279,7 @@ footer {
     object-position: center;
   }
 
-  .mobile-call {
+  .mobile-action {
     position: relative;
     display: grid;
     width: 47px;
@@ -1230,8 +1297,8 @@ footer {
     transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
   }
 
-  .mobile-call:hover,
-  .mobile-call:focus-visible {
+  .mobile-action:hover,
+  .mobile-action:focus-visible {
     border-color: rgba(255, 79, 154, 0.58);
     box-shadow:
       0 16px 34px rgba(0, 0, 0, 0.2),
@@ -1240,12 +1307,12 @@ footer {
     transform: translateY(-2px);
   }
 
-  .mobile-call:focus-visible {
+  .mobile-action:focus-visible {
     outline: 2px solid var(--gold-bright);
     outline-offset: 4px;
   }
 
-  .mobile-call-icon {
+  .mobile-action-icon {
     width: 21px;
     height: 21px;
     fill: currentColor;
@@ -1253,8 +1320,8 @@ footer {
     transition: transform 240ms ease;
   }
 
-  .mobile-call:hover .mobile-call-icon,
-  .mobile-call:focus-visible .mobile-call-icon {
+  .mobile-action:hover .mobile-action-icon,
+  .mobile-action:focus-visible .mobile-action-icon {
     transform: rotate(-8deg) scale(1.09);
   }
 
@@ -1495,6 +1562,17 @@ footer {
     padding: 52px 44px 62px;
   }
 
+  .podcast {
+    grid-template-columns: 1fr;
+    padding: 58px 44px;
+  }
+
+  .podcast-art {
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
   .gallery-panel {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1596,6 +1674,7 @@ footer {
 
   .experience,
   .services,
+  .podcast,
   .media-gallery {
     padding: 50px 21px;
   }
@@ -1611,6 +1690,18 @@ footer {
 
   .services {
     padding-top: 5px;
+  }
+
+  .podcast-art {
+    border-radius: 18px;
+  }
+
+  .podcast-copy p {
+    font-size: 0.95rem;
+  }
+
+  .podcast-button {
+    width: 100%;
   }
 
   .gallery-reveal {
@@ -1631,15 +1722,13 @@ footer {
   }
 
   .gallery-item,
-  .gallery-item img,
-  .gallery-item video {
+  .gallery-item img {
     min-height: 0;
     aspect-ratio: 1 / 1.08;
   }
 
   .gallery-item-large,
-  .gallery-item-large img,
-  .gallery-item-large video {
+  .gallery-item-large img {
     aspect-ratio: 1 / 0.72;
   }
 
@@ -1651,13 +1740,10 @@ footer {
 
   .gallery-item:nth-child(3),
   .gallery-item:nth-child(3) img,
-  .gallery-item:nth-child(3) video,
   .gallery-item:nth-child(7),
   .gallery-item:nth-child(7) img,
-  .gallery-item:nth-child(7) video,
   .gallery-item:nth-child(10),
-  .gallery-item:nth-child(10) img,
-  .gallery-item:nth-child(10) video {
+  .gallery-item:nth-child(10) img {
     aspect-ratio: 1 / 1.65;
   }
 
@@ -1668,10 +1754,8 @@ footer {
 
   .gallery-item:nth-child(5),
   .gallery-item:nth-child(5) img,
-  .gallery-item:nth-child(5) video,
   .gallery-item:nth-child(9),
-  .gallery-item:nth-child(9) img,
-  .gallery-item:nth-child(9) video {
+  .gallery-item:nth-child(9) img {
     aspect-ratio: 1 / 0.62;
   }
 
@@ -1719,15 +1803,14 @@ footer {
   .gallery-button-icon,
   .gallery-item,
   .gallery-item img,
-  .gallery-item video,
   .button-icon,
   .link-icon,
   .nav-icon,
   .brand,
   .brand::after,
   .brand-logo,
-  .mobile-call,
-  .mobile-call-icon,
+  .mobile-action,
+  .mobile-action-icon,
   .nav-toggle-icon .line {
     animation: none;
     transition: none;
@@ -1738,15 +1821,15 @@ footer {
   }
 
   .photo-card:first-child {
-    transform: rotate(-8deg);
+    transform: rotate(-7deg);
   }
 
   .photo-card:nth-child(2) {
-    transform: rotate(10deg);
+    transform: rotate(8deg);
   }
 
   .photo-card:nth-child(3) {
-    transform: rotate(-15deg);
+    transform: rotate(-10deg);
   }
 
   @media (max-width: 960px) {
