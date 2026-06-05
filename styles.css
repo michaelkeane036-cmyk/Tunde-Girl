@@ -134,19 +134,19 @@ a {
 
 .brand-logo {
   display: block;
-  width: clamp(220px, 20vw, 284px);
-  height: 82px;
+  width: clamp(270px, 25vw, 346px);
+  height: 98px;
   object-fit: contain;
   object-position: center;
   border-radius: 13px;
   filter:
     sepia(1)
-    saturate(4.6)
+    saturate(4.9)
     hue-rotate(288deg)
-    brightness(1.14)
-    contrast(1.08)
-    drop-shadow(0 0 14px rgba(255, 79, 154, 0.34))
-    drop-shadow(0 0 20px rgba(220, 184, 113, 0.14));
+    brightness(1.25)
+    contrast(1.13)
+    drop-shadow(0 0 18px rgba(255, 79, 154, 0.48))
+    drop-shadow(0 0 26px rgba(220, 184, 113, 0.2));
   transition: filter 240ms ease, transform 240ms ease;
 }
 
@@ -207,7 +207,6 @@ a {
 .nav-links a {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   transition: color 180ms ease, transform 180ms ease;
 }
 
@@ -220,22 +219,6 @@ a {
 .nav-links a:hover,
 .nav-links a:focus-visible {
   transform: translateY(-1px);
-}
-
-.nav-icon {
-  width: 17px;
-  height: 17px;
-  fill: currentColor;
-  opacity: 0.78;
-  transform-origin: center;
-  transition: opacity 180ms ease, transform 220ms ease;
-}
-
-.nav-links a:hover .nav-icon,
-.nav-links a:focus-visible .nav-icon,
-.nav-links a.is-active .nav-icon {
-  opacity: 1;
-  transform: rotate(-8deg) scale(1.08);
 }
 
 .nav-toggle {
@@ -939,6 +922,8 @@ h1 span {
 .podcast-art {
   position: relative;
   z-index: 1;
+  width: min(100%, 390px);
+  justify-self: center;
   overflow: hidden;
   border: 1px solid rgba(220, 184, 113, 0.28);
   border-radius: 24px;
@@ -1274,8 +1259,8 @@ footer {
   }
 
   .brand-logo {
-    width: clamp(190px, 34vw, 258px);
-    height: 88px;
+    width: clamp(218px, 38vw, 292px);
+    height: 96px;
     object-position: center;
   }
 
@@ -1605,8 +1590,8 @@ footer {
   }
 
   .brand-logo {
-    width: clamp(184px, 62vw, 244px);
-    height: 88px;
+    width: clamp(204px, 68vw, 276px);
+    height: 94px;
   }
 
   .nav-toggle {
@@ -1805,7 +1790,6 @@ footer {
   .gallery-item img,
   .button-icon,
   .link-icon,
-  .nav-icon,
   .brand,
   .brand::after,
   .brand-logo,
