@@ -535,6 +535,10 @@ h1 span {
   animation: orbit-blonde 15s ease-in-out -8s infinite;
 }
 
+.photo-card-mobile-only {
+  display: none;
+}
+
 .photo-card:hover {
   z-index: 3;
   border-color: rgba(255, 79, 154, 0.68);
@@ -1431,8 +1435,10 @@ footer {
   .photo-card,
   .photo-card:first-child,
   .photo-card:nth-child(2),
-  .photo-card:nth-child(3) {
+  .photo-card:nth-child(3),
+  .photo-card-mobile-only {
     position: absolute;
+    display: block;
     top: 0;
     right: 0;
     bottom: 48px;
