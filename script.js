@@ -77,6 +77,7 @@ const heroGallery = document.querySelector("[data-hero-gallery]");
 if (heroGallery) {
   const slides = Array.from(heroGallery.querySelectorAll("[data-gallery-slide]"));
   const dots = Array.from(heroGallery.querySelectorAll("[data-gallery-dot]"));
+  const heroImages = Array.from(heroGallery.querySelectorAll("[data-mobile-src]"));
   const mobileGallery = window.matchMedia("(max-width: 960px)");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let activeIndex = 0;
@@ -95,6 +96,21 @@ if (heroGallery) {
     });
   };
 
+  const updateHeroImages = () => {
+    const sourceKey = mobileGallery.matches ? "mobileSrc" : "desktopSrc";
+    const altKey = mobileGallery.matches ? "mobileAlt" : "desktopAlt";
+
+    heroImages.forEach((image) => {
+      if (image.dataset[sourceKey]) {
+        image.src = image.dataset[sourceKey];
+      }
+
+      if (image.dataset[altKey]) {
+        image.alt = image.dataset[altKey];
+      }
+    });
+  };
+
   const stopAutoplay = () => {
     window.clearInterval(timerId);
     timerId = undefined;
@@ -109,6 +125,8 @@ if (heroGallery) {
   };
 
   const updateGalleryMode = () => {
+    updateHeroImages();
+
     if (!mobileGallery.matches) {
       stopAutoplay();
       slides.forEach((slide) => slide.classList.remove("is-active"));
