@@ -1,4 +1,5 @@
-# Local unused media drafts kept out of the published site repository.
+.git
+.vercel
 11e14910-49b5-44c1-bc8b-f3a3fd88a6f8.jpg
 2aae9ed4-6709-4507-b8a0-d16e8b6d6aa7.jpg
 378B17AD-CD6E-40B8-9E91-78230794A19E.png
@@ -15,11 +16,6 @@ aa8943bd-cd43-4503-9543-4c098ef24376 (1).jpg
 aa8943bd-cd43-4503-9543-4c098ef24376.jpg
 adc92bcb-6a05-4417-8cc9-f91f7d062188.jpg
 copy_9A035BB1-30C8-485F-BBEF-42115F1289AB.jpeg
-eeb2562d-9203-454b-9521-076d23bdeae9.jpg
-IMG_4372.PNG
-IMG_4644.JPG
-copy_4D385555-4202-4FC0-9AB3-304BA5833397.jpeg
-copy_98D64F4A-AF9D-47E4-B0DF-717B1E0F0B7A.png
 copy_FE0B2294-0AFA-446B-9FCD-36915F30C29E.png
-
-.vercel
+eeb2562d-9203-454b-9521-076d23bdeae9.jpg
+IMG_4644.JPG
