@@ -1004,6 +1004,25 @@ h1 span {
   background: rgba(244, 251, 251, 0.08);
 }
 
+.podcast-copy .podcast-previous {
+  margin: 18px 0 0;
+  color: rgba(244, 251, 251, 0.68);
+  font-size: 0.92rem;
+}
+
+.podcast-copy .podcast-previous a {
+  color: var(--gold);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.podcast-copy .podcast-previous a:hover,
+.podcast-copy .podcast-previous a:focus-visible {
+  color: var(--emerald-bright);
+}
+
 .media-gallery {
   position: relative;
   display: grid;
